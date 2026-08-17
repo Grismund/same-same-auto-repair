@@ -15,21 +15,24 @@ const EMAIL_LINK = "mailto:josh@samesameautorepair.com?subject=Repair%20request"
 const GBP_REVIEW_URL = "https://www.google.com/maps/place/Denton+Mobile+Mechanic/@33.2089425,-97.4046755,11z/data=!4m12!1m2!2m1!1sdenton+mobile+mechanic!3m8!1s0x204d642e9763a77d:0xa9e1c5e7419deeed!8m2!3d33.2089425!4d-97.1162844!9m1!1b1!15sChZkZW50b24gbW9iaWxlIG1lY2hhbmljWhgiFmRlbnRvbiBtb2JpbGUgbWVjaGFuaWOSAQpjYXJfcmVwYWlymgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVU53TUhKSGIzZFJSUkFC4AEA-gEECCEQRQ!16s%2Fg%2F11kr76kbty";
 
 const SERVICES = [
-  { name: "Brakes",              desc: "Pads, rotors, calipers, lines. Squealing, grinding, or a soft pedal.",                   duration: "2h"   },
-  { name: "Alternators",         desc: "Battery light on, dimming headlights, dying while driving.",                              duration: "1.5h" },
-  { name: "Starters",            desc: "Clicking, cranking slow, or nothing at all when you turn the key.",                       duration: "1.5h" },
-  { name: "Transmissions",       desc: "Slipping, hard shifts, fluid leaks. Diagnosis and repair.",                               duration: "3h"   },
-  { name: "Engine work",         desc: "Timing, gaskets, sensors, belts, cooling. Most jobs a shop would take.",                  duration: "3h"   },
-  { name: "Regular maintenance", desc: "Oil, filters, fluids, plugs, belts \u2014 on your schedule, at your place.",              duration: "1h"   },
+  { name: "Engine repair",        desc: "Timing, gaskets, sensors, cooling, and more. Most jobs a shop would take.",               duration: "3h"   },
+  { name: "Suspension",           desc: "Shocks, struts, control arms, and ball joints. Smooth out the ride.",                     duration: "2h"   },
+  { name: "Brakes",               desc: "Pads, rotors, calipers, lines. Squealing, grinding, or a soft pedal.",                   duration: "2h"   },
+  { name: "Bumper replacement",   desc: "Front or rear bumper replacement. Restore the look and protection.",                      duration: "2h"   },
+  { name: "Alternator",           desc: "Battery light on, dimming headlights, dying while driving.",                              duration: "1.5h" },
+  { name: "And more",             desc: "Not sure what\u2019s wrong? Call and describe it \u2014 I\u2019ll tell you straight.",     duration: "1h"   },
 ];
 
-// SAMPLE COPY — replace with real customer quotes before this site goes public.
 const TESTIMONIALS = [
-  { quote: "Quoted $1,400 at the dealership for my brakes. Josh did it in my driveway for $600 and showed me the old pads.",           attr: "Marcus T., Denton"    },
-  { quote: "Truck wouldn\u2019t start before a shift. He came out same evening, replaced the starter, and I made it to work.",         attr: "Rachel B., Corinth"   },
-  { quote: "Told me my transmission issue wasn\u2019t worth fixing on a car that old. Could\u2019ve taken my money and didn\u2019t.",   attr: "Danny K., Sanger"     },
-  { quote: "Third mechanic I called and the only one who answered. Straight answer on price, showed up when he said.",                 attr: "Alicia M., Denton"    },
-  { quote: "Does my oil changes and inspections in my apartment lot now. I\u2019m never sitting in a waiting room again.",             attr: "Tyrone W., Lewisville"},
+  { name: "Van",    date: "Jul 2026", quote: "The best mobile mechanic you will find. Josh is easy to work with, responsive, communicates clearly, follows up, is very honest and up front about costs, risks, and benefits\u2026" },
+  { name: "Maz",    date: "Jun 2026", quote: "Awesome experience. He located my problem immediately after the diagnostic. I would recommend this mechanic to anyone\u2026" },
+  { name: "Devon",  date: "Dec 2025", quote: "Great mechanic! Great budget! And gets the job done fast and reliable!\u2026" },
+  { name: "Deanna", date: "Nov 2025", quote: "They were and are extremely considerate and willing to go out of their way\u2026 Extremely reliable and trustworthy!" },
+  { name: "Bob",    date: "Oct 2025", quote: "Great guy. Very knowledgeable. Helped me out big. Will use him again" },
+  { name: "Dianne", date: "Sep 2025", quote: "The washer is perfect. Exactly as described\u2026" },
+  { name: "James",  date: "Jul 2025", quote: "Messaged him on short notice came the same day\u2026 he is fast and precise very responsive\u2026" },
+  { name: "Jason",  date: "Jul 2025", quote: "Will use again for sure!" },
+  { name: "Josue",  date: "",         quote: "Si jala el vato" },
 ];
 
 // SAMPLE DATA — Josh has no Google reviews yet. Replace with real reviews at launch.
@@ -432,6 +435,22 @@ function initScheduler() {
 
 
 /* ============================================================
+   Hero Headline Carousel
+   ============================================================ */
+function initHeroCarousel() {
+  const lines = document.querySelectorAll(".hero__title-line");
+  if (lines.length < 2) return;
+
+  let current = 0;
+  setInterval(() => {
+    lines[current].classList.remove("is-active");
+    current = (current + 1) % lines.length;
+    lines[current].classList.add("is-active");
+  }, 4000);
+}
+
+
+/* ============================================================
    Section Fade-In
    ============================================================ */
 function initFadeIn() {
@@ -540,11 +559,102 @@ function showToast(msg) {
 
 
 /* ============================================================
+   Testimonial Carousel
+   ============================================================ */
+function initTestimonialCarousel() {
+  const track = document.querySelector(".testimonial-carousel__track");
+  const dotsContainer = document.querySelector(".testimonial-carousel__dots");
+  const prevBtn = document.querySelector(".testimonial-carousel__arrow--prev");
+  const nextBtn = document.querySelector(".testimonial-carousel__arrow--next");
+  if (!track) return;
+
+  const slides = track.querySelectorAll(".testimonial-carousel__slide");
+  const dots = [];
+
+  // Create dots
+  slides.forEach((_, i) => {
+    const dot = document.createElement("button");
+    dot.className = "testimonial-carousel__dot" + (i === 0 ? " is-active" : "");
+    dot.setAttribute("aria-label", "Go to testimonial " + (i + 1));
+    dot.addEventListener("click", () => {
+      slides[i].scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" });
+    });
+    dotsContainer.appendChild(dot);
+    dots.push(dot);
+  });
+
+  // IntersectionObserver for dot sync
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const idx = Array.from(slides).indexOf(entry.target);
+        dots.forEach((d, i) => d.classList.toggle("is-active", i === idx));
+      }
+    });
+  }, { root: track, threshold: 0.6 });
+
+  slides.forEach(s => observer.observe(s));
+
+  // Arrow buttons
+  if (prevBtn) {
+    prevBtn.addEventListener("click", () => {
+      track.scrollBy({ left: -track.offsetWidth * 0.5, behavior: "smooth" });
+      resetAutoAdvance();
+    });
+  }
+  if (nextBtn) {
+    nextBtn.addEventListener("click", () => {
+      track.scrollBy({ left: track.offsetWidth * 0.5, behavior: "smooth" });
+      resetAutoAdvance();
+    });
+  }
+
+  // Keyboard nav
+  track.addEventListener("keydown", e => {
+    if (e.key === "ArrowLeft") {
+      e.preventDefault();
+      track.scrollBy({ left: -track.offsetWidth * 0.5, behavior: "smooth" });
+      resetAutoAdvance();
+    } else if (e.key === "ArrowRight") {
+      e.preventDefault();
+      track.scrollBy({ left: track.offsetWidth * 0.5, behavior: "smooth" });
+      resetAutoAdvance();
+    }
+  });
+
+  // Auto-advance every 6 seconds
+  let autoTimer = setInterval(advance, 6000);
+
+  function advance() {
+    const maxScroll = track.scrollWidth - track.clientWidth;
+    if (track.scrollLeft >= maxScroll - 10) {
+      track.scrollTo({ left: 0, behavior: "smooth" });
+    } else {
+      track.scrollBy({ left: track.offsetWidth * 0.5, behavior: "smooth" });
+    }
+  }
+
+  function resetAutoAdvance() {
+    clearInterval(autoTimer);
+    autoTimer = setInterval(advance, 6000);
+  }
+
+  // Pause on interaction (touch/mouse)
+  track.addEventListener("pointerdown", () => clearInterval(autoTimer));
+  track.addEventListener("pointerup", () => {
+    autoTimer = setInterval(advance, 6000);
+  });
+}
+
+
+/* ============================================================
    Init
    ============================================================ */
 document.addEventListener("DOMContentLoaded", () => {
   initPremiumPopovers();
+  initHeroCarousel();
   initCarousel();
+  initTestimonialCarousel();
   initContactForm();
   initScheduler();
   initFadeIn();

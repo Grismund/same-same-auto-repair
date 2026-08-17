@@ -29,8 +29,11 @@
     <img class="hero__img" src="./assets/img/hero-brake-job.jpg" alt="Josh working on brakes on a blue SUV outdoors" width="1600" height="1200">
     <div class="hero__overlay"></div>
     <div class="hero__content">
-      <h1 class="hero__title">Mobile mechanic in Denton.<br>I come to you.</h1>
-      <p class="hero__sub">Brakes, starters, alternators, engine work &mdash; done in your driveway. Labor only, parts at cost, usually about half what a shop quotes.</p>
+      <h1 class="hero__title">
+        <span class="hero__title-line is-active">Mobile repairs from a mechanic you can trust.</span>
+        <span class="hero__title-line">Over 15 years of professional experience.</span>
+        <span class="hero__title-line">Honest work, honest pricing.</span>
+      </h1>
       <div class="hero__actions">
         <a href="tel:+19123328214" class="btn btn--go">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
@@ -41,7 +44,7 @@
           Email Josh
         </a>
       </div>
-      <p class="hero__info">Denton and about 45 minutes out &middot; Mon&ndash;Sat, 8am&ndash;6pm</p>
+      <p class="hero__info">Serving the DFW area, Denton, Lewisville, and more. &middot; Mon&ndash;Sat, 8am&ndash;6pm</p>
     </div>
   </section>
 
@@ -55,12 +58,50 @@
   </div>
 
   <!-- ============================================================
+       Storybrand
+       ============================================================ -->
+  <section class="section storybrand fade-rise">
+    <div class="container storybrand__inner">
+      <p class="storybrand__problem">
+        You&rsquo;re tired of dealing with shops that overcharge and shady unprofessionals.
+        You need a professional you can trust who can do the work on your terms.
+      </p>
+      <div class="storybrand__bio">
+        <div class="storybrand__photo">
+          <img src="./assets/img/profile.JPG" alt="Josh, owner of Same Same Auto Repair" width="280" height="280">
+        </div>
+        <div class="storybrand__text">
+          <h2 class="storybrand__name">Hi, I&rsquo;m Josh.</h2>
+          <p>With over 15 years of professional experience, I know how to get you the service you need at a price that&rsquo;s fair.</p>
+          <p>I work around your schedule and your location to get you the best service. Set up an appointment today.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
        Services
        ============================================================ -->
   <section class="section fade-rise" id="services">
     <div class="container">
       <h2 class="section__heading">What I fix</h2>
       <div class="services-grid">
+
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <div class="service-card__name">Engine repair</div>
+          <div class="service-card__desc">Timing, gaskets, sensors, cooling, and more. Most jobs a shop would take.</div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+          </div>
+          <div class="service-card__name">Suspension</div>
+          <div class="service-card__desc">Shocks, struts, control arms, and ball joints. Smooth out the ride.</div>
+        </div>
 
         <div class="service-card">
           <div class="service-card__icon">
@@ -72,9 +113,17 @@
 
         <div class="service-card">
           <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 12h4M14 12h4M10 6v12M14 6v12"/></svg>
+          </div>
+          <div class="service-card__name">Bumper replacement</div>
+          <div class="service-card__desc">Front or rear bumper replacement. Restore the look and protection.</div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
           </div>
-          <div class="service-card__name">Alternators</div>
+          <div class="service-card__name">Alternator</div>
           <div class="service-card__desc">Battery light on, dimming headlights, dying while driving.</div>
         </div>
 
@@ -82,36 +131,12 @@
           <div class="service-card__icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
           </div>
-          <div class="service-card__name">Starters</div>
-          <div class="service-card__desc">Clicking, cranking slow, or nothing at all when you turn the key.</div>
-        </div>
-
-        <div class="service-card">
-          <div class="service-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 12h4M14 12h4M10 6v12M14 6v12"/></svg>
-          </div>
-          <div class="service-card__name">Transmissions</div>
-          <div class="service-card__desc">Slipping, hard shifts, fluid leaks. Diagnosis and repair.</div>
-        </div>
-
-        <div class="service-card">
-          <div class="service-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-          </div>
-          <div class="service-card__name">Engine work</div>
-          <div class="service-card__desc">Timing, gaskets, sensors, belts, cooling. Most jobs a shop would take.</div>
-        </div>
-
-        <div class="service-card">
-          <div class="service-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-          </div>
-          <div class="service-card__name">Regular maintenance</div>
-          <div class="service-card__desc">Oil, filters, fluids, plugs, belts &mdash; on your schedule, at your place.</div>
+          <div class="service-card__name">And more</div>
+          <div class="service-card__desc">Not sure what&rsquo;s wrong? Call and describe it &mdash; I&rsquo;ll tell you straight.</div>
         </div>
 
       </div>
-      <p class="services__trust">Not sure what&rsquo;s wrong? Call and describe it. I&rsquo;ll tell you straight whether it&rsquo;s worth fixing.</p>
+      <p class="services__trust">Labor only, parts at cost &mdash; usually about half what a shop quotes.</p>
     </div>
   </section>
 
@@ -216,38 +241,148 @@
   <!-- ============================================================
        Testimonials
        ============================================================ -->
-  <!-- SAMPLE COPY — replace with real customer quotes before this site goes public. -->
   <section class="section fade-rise" id="testimonials">
     <div class="container">
       <h2 class="section__heading">What people say</h2>
-      <div class="testimonial-list">
+    </div>
+    <div class="testimonial-carousel">
+      <div class="testimonial-carousel__track" tabindex="0" role="region" aria-label="Customer testimonials">
 
-        <div class="testimonial-card">
-          <p class="testimonial-card__quote">&ldquo;Quoted $1,400 at the dealership for my brakes. Josh did it in my driveway for $600 and showed me the old pads.&rdquo;</p>
-          <p class="testimonial-card__attr">&mdash; Marcus T., Denton</p>
+        <div class="testimonial-carousel__slide">
+          <div class="testimonial-card">
+            <div class="testimonial-card__stars">&starf;&starf;&starf;&starf;&starf;</div>
+            <p class="testimonial-card__quote">&ldquo;The best mobile mechanic you will find. Josh is easy to work with, responsive, communicates clearly, follows up, is very honest and up front about costs, risks, and benefits&hellip;&rdquo;</p>
+            <div class="testimonial-card__footer">
+              <div class="testimonial-card__avatar" style="background:#2563EB">V</div>
+              <div>
+                <div class="testimonial-card__name">Van</div>
+                <div class="testimonial-card__date">Jul 2026</div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="testimonial-card">
-          <p class="testimonial-card__quote">&ldquo;Truck wouldn&rsquo;t start before a shift. He came out same evening, replaced the starter, and I made it to work.&rdquo;</p>
-          <p class="testimonial-card__attr">&mdash; Rachel B., Corinth</p>
+        <div class="testimonial-carousel__slide">
+          <div class="testimonial-card">
+            <div class="testimonial-card__stars">&starf;&starf;&starf;&starf;&starf;</div>
+            <p class="testimonial-card__quote">&ldquo;Awesome experience. He located my problem immediately after the diagnostic. I would recommend this mechanic to anyone&hellip;&rdquo;</p>
+            <div class="testimonial-card__footer">
+              <div class="testimonial-card__avatar" style="background:#7C3AED">M</div>
+              <div>
+                <div class="testimonial-card__name">Maz</div>
+                <div class="testimonial-card__date">Jun 2026</div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="testimonial-card">
-          <p class="testimonial-card__quote">&ldquo;Told me my transmission issue wasn&rsquo;t worth fixing on a car that old. Could&rsquo;ve taken my money and didn&rsquo;t.&rdquo;</p>
-          <p class="testimonial-card__attr">&mdash; Danny K., Sanger</p>
+        <div class="testimonial-carousel__slide">
+          <div class="testimonial-card">
+            <div class="testimonial-card__stars">&starf;&starf;&starf;&starf;&starf;</div>
+            <p class="testimonial-card__quote">&ldquo;Great mechanic! Great budget! And gets the job done fast and reliable!&hellip;&rdquo;</p>
+            <div class="testimonial-card__footer">
+              <div class="testimonial-card__avatar" style="background:#059669">D</div>
+              <div>
+                <div class="testimonial-card__name">Devon</div>
+                <div class="testimonial-card__date">Dec 2025</div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="testimonial-card">
-          <p class="testimonial-card__quote">&ldquo;Third mechanic I called and the only one who answered. Straight answer on price, showed up when he said.&rdquo;</p>
-          <p class="testimonial-card__attr">&mdash; Alicia M., Denton</p>
+        <div class="testimonial-carousel__slide">
+          <div class="testimonial-card">
+            <div class="testimonial-card__stars">&starf;&starf;&starf;&starf;&starf;</div>
+            <p class="testimonial-card__quote">&ldquo;They were and are extremely considerate and willing to go out of their way&hellip; Extremely reliable and trustworthy!&rdquo;</p>
+            <div class="testimonial-card__footer">
+              <div class="testimonial-card__avatar" style="background:#DC2626">D</div>
+              <div>
+                <div class="testimonial-card__name">Deanna</div>
+                <div class="testimonial-card__date">Nov 2025</div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="testimonial-card">
-          <p class="testimonial-card__quote">&ldquo;Does my oil changes and inspections in my apartment lot now. I&rsquo;m never sitting in a waiting room again.&rdquo;</p>
-          <p class="testimonial-card__attr">&mdash; Tyrone W., Lewisville</p>
+        <div class="testimonial-carousel__slide">
+          <div class="testimonial-card">
+            <div class="testimonial-card__stars">&starf;&starf;&starf;&starf;&starf;</div>
+            <p class="testimonial-card__quote">&ldquo;Great guy. Very knowledgeable. Helped me out big. Will use him again&rdquo;</p>
+            <div class="testimonial-card__footer">
+              <div class="testimonial-card__avatar" style="background:#D97706">B</div>
+              <div>
+                <div class="testimonial-card__name">Bob</div>
+                <div class="testimonial-card__date">Oct 2025</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-carousel__slide">
+          <div class="testimonial-card">
+            <div class="testimonial-card__stars">&starf;&starf;&starf;&starf;&starf;</div>
+            <p class="testimonial-card__quote">&ldquo;The washer is perfect. Exactly as described&hellip;&rdquo;</p>
+            <div class="testimonial-card__footer">
+              <div class="testimonial-card__avatar" style="background:#9333EA">D</div>
+              <div>
+                <div class="testimonial-card__name">Dianne</div>
+                <div class="testimonial-card__date">Sep 2025</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-carousel__slide">
+          <div class="testimonial-card">
+            <div class="testimonial-card__stars">&starf;&starf;&starf;&starf;&starf;</div>
+            <p class="testimonial-card__quote">&ldquo;Messaged him on short notice came the same day&hellip; he is fast and precise very responsive&hellip;&rdquo;</p>
+            <div class="testimonial-card__footer">
+              <div class="testimonial-card__avatar" style="background:#2563EB">J</div>
+              <div>
+                <div class="testimonial-card__name">James</div>
+                <div class="testimonial-card__date">Jul 2025</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-carousel__slide">
+          <div class="testimonial-card">
+            <div class="testimonial-card__stars">&starf;&starf;&starf;&starf;&starf;</div>
+            <p class="testimonial-card__quote">&ldquo;Will use again for sure!&rdquo;</p>
+            <div class="testimonial-card__footer">
+              <div class="testimonial-card__avatar" style="background:#059669">J</div>
+              <div>
+                <div class="testimonial-card__name">Jason</div>
+                <div class="testimonial-card__date">Jul 2025</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-carousel__slide">
+          <div class="testimonial-card">
+            <div class="testimonial-card__stars">&starf;&starf;&starf;&starf;&starf;</div>
+            <p class="testimonial-card__quote">&ldquo;Si jala el vato&rdquo;</p>
+            <div class="testimonial-card__footer">
+              <div class="testimonial-card__avatar" style="background:#DC2626">J</div>
+              <div>
+                <div class="testimonial-card__name">Josue</div>
+              </div>
+            </div>
+          </div>
         </div>
 
       </div>
+
+      <button class="testimonial-carousel__arrow testimonial-carousel__arrow--prev" aria-label="Previous testimonial">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <button class="testimonial-carousel__arrow testimonial-carousel__arrow--next" aria-label="Next testimonial">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+
+      <div class="testimonial-carousel__dots"></div>
     </div>
   </section>
 
@@ -468,6 +603,12 @@
         <a href="./review/" style="display:inline-flex;align-items:center;gap:6px">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           Leave a review
+        </a>
+      </p>
+      <p style="margin-top:0.5rem">
+        <a href="https://www.facebook.com/josh.gerrald69#" target="_blank" rel="noopener noreferrer" class="footer__social-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          Facebook
         </a>
       </p>
       <p class="footer__copy">&copy; 2026 Same Same Auto Repair</p>
