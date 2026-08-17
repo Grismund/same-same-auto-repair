@@ -1035,7 +1035,7 @@ fieldset { border: none; }
   padding: 8px 12px calc(env(safe-area-inset-bottom, 4px) + 12px);
   display: flex;
   gap: 10px;
-  height: 56px;
+  min-height: 56px;
 }
 .sticky-bar .btn {
   flex: 1;
