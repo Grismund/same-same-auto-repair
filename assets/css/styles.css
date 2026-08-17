@@ -360,18 +360,13 @@ fieldset { border: none; }
   color: var(--steel);
   line-height: 1.45;
 }
-.services__trust {
-  font-size: 0.95rem;
-  color: var(--steel);
-  font-style: italic;
-  text-align: center;
-  max-width: 520px;
-  margin: 0 auto;
-}
 
 /* ============================================================
    Storybrand Section
    ============================================================ */
+.storybrand {
+  padding-bottom: 0;
+}
 .storybrand__problem {
   font-size: 1.2rem;
   font-style: italic;
@@ -392,6 +387,7 @@ fieldset { border: none; }
   height: 200px;
   border-radius: 50%;
   object-fit: cover;
+  flex-shrink: 0;
 }
 .storybrand__name {
   font-size: 1.5rem;
@@ -1036,7 +1032,7 @@ fieldset { border: none; }
   z-index: 100;
   background: var(--paper);
   box-shadow: 0 -2px 12px rgba(0,0,0,0.1);
-  padding: 8px 12px;
+  padding: 8px 12px calc(env(safe-area-inset-bottom, 4px) + 12px);
   display: flex;
   gap: 10px;
   height: 56px;
@@ -1234,7 +1230,7 @@ fieldset { border: none; }
   }
   .hero__title {
     font-size: 2.75rem;
-    min-height: 1.2em;
+    min-height: 2.4em;
   }
   .storybrand__bio {
     flex-direction: row;

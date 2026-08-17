@@ -96,6 +96,60 @@ function initPremiumPopovers() {
 
 
 /* ============================================================
+   Click-Drag Scrolling (desktop)
+   ============================================================ */
+function enableDragScroll(track) {
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+  let moved = false;
+
+  track.style.cursor = "grab";
+
+  track.addEventListener("mousedown", e => {
+    // Ignore if clicking a button/link inside the track
+    if (e.target.closest("a, button")) return;
+    isDown = true;
+    moved = false;
+    startX = e.pageX - track.offsetLeft;
+    scrollLeft = track.scrollLeft;
+    track.style.cursor = "grabbing";
+    track.style.userSelect = "none";
+  });
+
+  track.addEventListener("mousemove", e => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - track.offsetLeft;
+    const walk = x - startX;
+    if (Math.abs(walk) > 3) moved = true;
+    track.scrollLeft = scrollLeft - walk;
+  });
+
+  track.addEventListener("mouseup", () => {
+    isDown = false;
+    track.style.cursor = "grab";
+    track.style.userSelect = "";
+  });
+
+  track.addEventListener("mouseleave", () => {
+    isDown = false;
+    track.style.cursor = "grab";
+    track.style.userSelect = "";
+  });
+
+  // Prevent click events after a drag so links/buttons aren't triggered
+  track.addEventListener("click", e => {
+    if (moved) {
+      e.preventDefault();
+      e.stopPropagation();
+      moved = false;
+    }
+  }, true);
+}
+
+
+/* ============================================================
    Photo Carousel
    ============================================================ */
 function initCarousel() {
@@ -154,6 +208,8 @@ function initCarousel() {
       track.scrollBy({ left: track.offsetWidth * 0.5, behavior: "smooth" });
     }
   });
+
+  enableDragScroll(track);
 }
 
 
@@ -644,6 +700,8 @@ function initTestimonialCarousel() {
   track.addEventListener("pointerup", () => {
     autoTimer = setInterval(advance, 6000);
   });
+
+  enableDragScroll(track);
 }
 
 
