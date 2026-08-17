@@ -1,0 +1,63 @@
+  <!-- ============================================================
+       Contact Form ★
+       ============================================================ -->
+  <!-- data-netlify="true" and honeypot go here at launch -->
+  <section class="section section--alt fade-rise" id="contact">
+    <div class="container">
+      <h2 class="section__heading">
+        Get in touch
+        <button class="premium-star" aria-label="Premium feature — what's this?" aria-controls="popover-contact">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </button>
+      </h2>
+
+      <form class="contact-form" id="contact-form" novalidate>
+        <div class="form-group">
+          <label for="contact-name">Your name</label>
+          <input type="text" id="contact-name" name="name" autocomplete="name" required>
+          <span class="form-error">Enter your name so Josh knows who&rsquo;s reaching out.</span>
+        </div>
+        <div class="form-group">
+          <label for="contact-phone">Phone</label>
+          <input type="tel" id="contact-phone" name="phone" autocomplete="tel" required>
+          <span class="form-error">Enter a phone number so Josh can call you back.</span>
+        </div>
+        <div class="form-group">
+          <label for="contact-vehicle">Vehicle (year, make, model)</label>
+          <input type="text" id="contact-vehicle" name="vehicle" placeholder="e.g. 2018 Honda Civic" required>
+          <span class="form-error">Enter your vehicle so Josh can come prepared.</span>
+        </div>
+        <div class="form-group">
+          <label for="contact-issue">What&rsquo;s going on?</label>
+          <textarea id="contact-issue" name="issue" rows="4" placeholder="Describe the problem or what you need done" required></textarea>
+          <span class="form-error">Describe the issue so Josh knows what to expect.</span>
+        </div>
+        <div class="form-group">
+          <label for="contact-time">Best time to reach you</label>
+          <select id="contact-time" name="best_time">
+            <option value="">No preference</option>
+            <option value="morning">Morning (8am&ndash;12pm)</option>
+            <option value="afternoon">Afternoon (12pm&ndash;4pm)</option>
+            <option value="evening">Evening (4pm&ndash;6pm)</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn--signal" style="width:100%">Send it</button>
+      </form>
+
+      <div class="form-success" id="contact-success">
+        <div class="form-success__title">Got it.</div>
+        <p class="form-success__text">Josh will text you back &mdash; usually within an hour.</p>
+        <p class="form-success__demo">Demo &mdash; nothing was sent.</p>
+        <button class="form-success__reset">Send another</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Premium popover: Contact -->
+  <div class="premium-popover" id="popover-contact" role="dialog" aria-modal="true" aria-label="Premium feature info">
+    <div class="premium-popover__card">
+      <div class="premium-popover__title">Included in the full package</div>
+      <p class="premium-popover__text">This feature is part of the complete setup. Ask Seth about it.</p>
+      <button class="premium-popover__close">Got it</button>
+    </div>
+  </div>

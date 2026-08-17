@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rate Same Same Auto Repair</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+  <div class="review-page">
+    <h1 class="review-page__heading">How did we do?</h1>
+    <p class="review-page__biz">
+      Josh Steph &middot; Same Same Auto Repair
+      <button class="premium-star" aria-label="Premium feature — what's this?" aria-controls="popover-review" style="vertical-align:middle;margin-left:4px">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </button>
+    </p>
+    <p style="color:var(--steel);font-size:0.95rem;margin-bottom:1rem;">Tap a rating to let us know.</p>
+
+    <div class="review-page__rating-section">
+      <div class="review-page__stars">
+        <button class="review-page__star" aria-label="1 star">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </button>
+        <button class="review-page__star" aria-label="2 stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </button>
+        <button class="review-page__star" aria-label="3 stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </button>
+        <button class="review-page__star" aria-label="4 stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </button>
+        <button class="review-page__star" aria-label="5 stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="review-interstitial">
+      <p class="review-interstitial__text">Thanks! Taking you to Google&hellip;</p>
+    </div>
+
+    <div class="review-page__back">
+      <a href="../">&larr; Back to site</a>
+    </div>
+  </div>
+
+  <!-- Feedback modal (1-4 stars) -->
+  <div class="review-modal" role="dialog" aria-modal="true" aria-label="Leave feedback">
+    <div class="review-modal__card">
+      <h2 class="review-modal__title">Sorry we missed the mark. What happened?</h2>
+      <textarea placeholder="Tell us what went wrong" rows="4"></textarea>
+      <input type="text" placeholder="Name (optional)">
+      <input type="tel" placeholder="Phone (optional)">
+      <button class="review-modal__submit">Send feedback</button>
+      <p style="font-size:0.78rem;color:var(--steel);opacity:0.6;margin-top:10px;text-align:center">Demo &mdash; feedback isn&rsquo;t saved yet.</p>
+    </div>
+  </div>
+
+  <!-- Premium popover: Review page -->
+  <div class="premium-popover" id="popover-review" role="dialog" aria-modal="true" aria-label="Premium feature info">
+    <div class="premium-popover__card">
+      <div class="premium-popover__title">Included in the full package</div>
+      <p class="premium-popover__text">This feature is part of the complete setup. Ask Seth about it.</p>
+      <button class="premium-popover__close">Got it</button>
+    </div>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
