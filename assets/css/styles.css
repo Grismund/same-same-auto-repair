@@ -122,7 +122,7 @@ fieldset { border: none; }
   letter-spacing: var(--heading-tracking);
   color: var(--ink);
 }
-.header__cta {
+.header .header__cta {
   display: none;
 }
 
@@ -1218,7 +1218,7 @@ fieldset { border: none; }
     max-width: var(--content-max-lg);
     padding: 0 40px;
   }
-  .header__cta {
+  .header .header__cta {
     display: inline-flex;
   }
   .hero {
