@@ -429,7 +429,7 @@ fieldset { border: none; }
 
 .carousel__slide {
   flex: 0 0 85%;
-  scroll-snap-align: start;
+  scroll-snap-align: center;
   border-radius: var(--radius);
   overflow: hidden;
   position: relative;
@@ -512,7 +512,7 @@ fieldset { border: none; }
 
 .testimonial-carousel__slide {
   flex: 0 0 85%;
-  scroll-snap-align: start;
+  scroll-snap-align: center;
 }
 .testimonial-card {
   background: var(--paper);

@@ -168,7 +168,7 @@ function initCarousel() {
     dot.className = "carousel__dot" + (i === 0 ? " is-active" : "");
     dot.setAttribute("aria-label", "Go to slide " + (i + 1));
     dot.addEventListener("click", () => {
-      slides[i].scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" });
+      slides[i].scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
     });
     dotsContainer.appendChild(dot);
     dots.push(dot);
@@ -633,7 +633,7 @@ function initTestimonialCarousel() {
     dot.className = "testimonial-carousel__dot" + (i === 0 ? " is-active" : "");
     dot.setAttribute("aria-label", "Go to testimonial " + (i + 1));
     dot.addEventListener("click", () => {
-      slides[i].scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" });
+      slides[i].scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
     });
     dotsContainer.appendChild(dot);
     dots.push(dot);

@@ -17,7 +17,7 @@
 
 .testimonial-carousel__slide {
   flex: 0 0 85%;
-  scroll-snap-align: start;
+  scroll-snap-align: center;
 }
 .testimonial-card {
   background: var(--paper);
