@@ -41,3 +41,15 @@ for (const page of pages) {
 }
 
 console.log(`\nBuilt ${built} page(s).`);
+
+// --- CSS build ---
+const CSS_SRC = path.join(SRC, 'css');
+const CSS_OUT = path.join(ROOT, 'assets', 'css', 'styles.css');
+
+const cssFiles = fs.readdirSync(CSS_SRC)
+  .filter(f => f.endsWith('.css'))
+  .sort();
+
+const css = cssFiles.map(f => fs.readFileSync(path.join(CSS_SRC, f), 'utf8')).join('\n');
+fs.writeFileSync(CSS_OUT, css);
+console.log(`Built styles.css from ${cssFiles.length} partial(s).`);

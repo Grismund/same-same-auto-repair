@@ -1,0 +1,110 @@
+/* ============================================================
+   Testimonials Carousel
+   ============================================================ */
+.testimonial-carousel {
+  position: relative;
+}
+.testimonial-carousel__track {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: 0 20px;
+}
+.testimonial-carousel__track::-webkit-scrollbar { display: none; }
+
+.testimonial-carousel__slide {
+  flex: 0 0 85%;
+  scroll-snap-align: start;
+}
+.testimonial-card {
+  background: var(--paper);
+  border: 1px solid var(--haze);
+  border-radius: var(--radius);
+  padding: 24px 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.testimonial-card__stars {
+  color: #FBBC04;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  margin-bottom: 0.75rem;
+}
+.testimonial-card__quote {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-style: italic;
+  flex: 1;
+}
+.testimonial-card__footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.testimonial-card__avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #fff;
+  flex-shrink: 0;
+}
+.testimonial-card__name {
+  font-weight: 700;
+  font-size: 0.88rem;
+}
+.testimonial-card__date {
+  font-size: 0.78rem;
+  color: var(--steel);
+}
+
+.testimonial-carousel__arrow {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.9);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  align-items: center;
+  justify-content: center;
+  color: var(--ink);
+}
+.testimonial-carousel__arrow:hover { background: #fff; }
+.testimonial-carousel__arrow--prev { left: 8px; }
+.testimonial-carousel__arrow--next { right: 8px; }
+.testimonial-carousel__arrow svg { width: 20px; height: 20px; }
+
+.testimonial-carousel__dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 16px;
+}
+.testimonial-carousel__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--steel);
+  opacity: 0.3;
+  transition: opacity 0.2s;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+.testimonial-carousel__dot.is-active {
+  opacity: 1;
+  background: var(--signal);
+}

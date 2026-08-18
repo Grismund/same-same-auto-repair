@@ -1,0 +1,34 @@
+/* ============================================================
+   Footer
+   ============================================================ */
+.footer {
+  background: var(--ink);
+  color: rgba(255,255,255,0.75);
+  padding: 48px 0 120px;
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+.footer__name {
+  color: #fff;
+  font-weight: var(--heading-weight);
+  font-size: 1.05rem;
+  margin-bottom: 0.75rem;
+}
+.footer a {
+  color: rgba(255,255,255,0.9);
+  text-decoration: underline;
+  text-decoration-color: rgba(255,255,255,0.3);
+}
+.footer a:hover {
+  text-decoration-color: rgba(255,255,255,0.7);
+}
+.footer__social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.footer__copy {
+  margin-top: 1.5rem;
+  opacity: 0.5;
+  font-size: 0.78rem;
+}

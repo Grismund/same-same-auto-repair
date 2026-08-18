@@ -1,0 +1,41 @@
+/* ============================================================
+   Storybrand Section
+   ============================================================ */
+.storybrand {
+  padding-bottom: 0;
+}
+.storybrand__problem {
+  font-size: 1.2rem;
+  font-style: italic;
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.6;
+  color: var(--steel);
+}
+.storybrand__bio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+.storybrand__photo img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.storybrand__name {
+  font-size: 1.5rem;
+  font-weight: var(--heading-weight);
+  letter-spacing: var(--heading-tracking);
+  margin-bottom: 0.5rem;
+}
+.storybrand__text p {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+.storybrand__text p:last-child {
+  margin-bottom: 0;
+}

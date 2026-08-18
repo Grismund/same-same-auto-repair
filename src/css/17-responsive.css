@@ -1,0 +1,81 @@
+/* ============================================================
+   Desktop Breakpoint
+   ============================================================ */
+@media (min-width: 768px) {
+  :root {
+    --section-pad: 96px;
+  }
+  .container {
+    max-width: var(--content-max-lg);
+    padding: 0 40px;
+  }
+  .header .header__cta {
+    display: inline-flex;
+  }
+  .hero {
+    min-height: 70vh;
+  }
+  .hero__content {
+    padding: 60px 40px 72px;
+    max-width: var(--content-max-lg);
+  }
+  .hero__actions .btn--go:not(.hero__contact-btn),
+  .hero__actions .btn--outline {
+    display: inline-flex;
+  }
+  .hero__contact-btn {
+    display: none;
+  }
+  .hero__title {
+    font-size: 2.75rem;
+    min-height: 3.6em;
+  }
+  .storybrand__bio {
+    flex-direction: row;
+    gap: 2.5rem;
+    align-items: flex-start;
+  }
+  .storybrand__photo img {
+    width: 260px;
+    height: 260px;
+  }
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .carousel__slide {
+    flex: 0 0 45%;
+  }
+  .carousel__arrow {
+    display: flex;
+  }
+  .testimonial-carousel__slide {
+    flex: 0 0 45%;
+  }
+  .testimonial-carousel__arrow {
+    display: flex;
+  }
+  .reviews-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .sticky-bar {
+    display: none;
+  }
+  .footer {
+    padding-bottom: 48px;
+  }
+  .scheduler__slots {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .carousel__slide {
+    flex: 0 0 35%;
+  }
+  .testimonial-carousel__slide {
+    flex: 0 0 35%;
+  }
+}

@@ -1,0 +1,82 @@
+/* ============================================================
+   Photo Carousel
+   ============================================================ */
+.carousel {
+  position: relative;
+}
+.carousel__track {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: 0 20px;
+}
+.carousel__track::-webkit-scrollbar { display: none; }
+
+.carousel__slide {
+  flex: 0 0 85%;
+  scroll-snap-align: start;
+  border-radius: var(--radius);
+  overflow: hidden;
+  position: relative;
+}
+.carousel__slide img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+.carousel__caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 14px;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  color: #fff;
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+
+.carousel__arrow {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.9);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  align-items: center;
+  justify-content: center;
+  color: var(--ink);
+}
+.carousel__arrow:hover { background: #fff; }
+.carousel__arrow--prev { left: 8px; }
+.carousel__arrow--next { right: 8px; }
+.carousel__arrow svg { width: 20px; height: 20px; }
+
+.carousel__dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 16px;
+}
+.carousel__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--steel);
+  opacity: 0.3;
+  transition: opacity 0.2s;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+.carousel__dot.is-active {
+  opacity: 1;
+  background: var(--signal);
+}

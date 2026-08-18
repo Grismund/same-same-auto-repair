@@ -1,0 +1,24 @@
+/* ============================================================
+   Sticky Bottom Bar (mobile)
+   ============================================================ */
+.sticky-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: var(--paper);
+  box-shadow: 0 -2px 12px rgba(0,0,0,0.1);
+  padding: 8px 12px calc(env(safe-area-inset-bottom, 4px) + 12px);
+  display: flex;
+  gap: 10px;
+  min-height: 56px;
+}
+.sticky-bar .btn {
+  flex: 1;
+  padding: 0;
+  font-size: 0.9rem;
+}
+.sticky-bar .btn--outline-dark {
+  border-color: var(--steel);
+}

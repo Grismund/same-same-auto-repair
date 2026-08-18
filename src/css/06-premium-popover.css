@@ -1,0 +1,64 @@
+/* ============================================================
+   Premium Star Button & Popover
+   ============================================================ */
+.premium-star {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--signal);
+  padding: 2px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+}
+.premium-star svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+.premium-popover {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(0,0,0,0.4);
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.premium-popover.is-open {
+  display: flex;
+}
+.premium-popover__card {
+  background: var(--paper);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  max-width: 360px;
+  width: 100%;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
+.premium-popover__title {
+  font-weight: var(--heading-weight);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.premium-popover__text {
+  font-size: 0.95rem;
+  color: var(--steel);
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
+}
+.premium-popover__close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 24px;
+  background: var(--ink);
+  color: #fff;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.9rem;
+  min-height: 44px;
+}
+.premium-popover__close:hover { background: var(--steel); }

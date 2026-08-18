@@ -1,0 +1,36 @@
+/* ============================================================
+   Services
+   ============================================================ */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 1.5rem;
+}
+.service-card {
+  background: var(--paper);
+  border: 1px solid var(--haze);
+  border-radius: var(--radius);
+  padding: 20px 16px;
+  text-align: center;
+}
+.service-card__icon {
+  width: 36px;
+  height: 36px;
+  margin: 0 auto 10px;
+  color: var(--signal);
+}
+.service-card__icon svg {
+  width: 100%;
+  height: 100%;
+}
+.service-card__name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+.service-card__desc {
+  font-size: 0.82rem;
+  color: var(--steel);
+  line-height: 1.45;
+}

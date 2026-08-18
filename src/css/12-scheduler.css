@@ -1,0 +1,206 @@
+/* ============================================================
+   Scheduler
+   ============================================================ */
+.scheduler {
+  background: var(--paper);
+  border: 1px solid var(--haze);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.scheduler__header {
+  padding: 20px;
+  border-bottom: 1px solid var(--haze);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.scheduler__back {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--steel);
+  min-width: 44px;
+  min-height: 44px;
+}
+.scheduler__back:hover { background: var(--haze); }
+.scheduler__back svg { width: 18px; height: 18px; }
+.scheduler__step-title {
+  font-weight: 700;
+  font-size: 1rem;
+}
+.scheduler__body {
+  padding: 20px;
+}
+
+/* Step 1: Service list */
+.scheduler__services {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.scheduler__service-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid var(--haze);
+  border-radius: var(--radius-sm);
+  text-align: left;
+  font-size: 0.95rem;
+  font-weight: 600;
+  min-height: 48px;
+  transition: border-color 0.15s, background 0.15s;
+}
+.scheduler__service-btn:hover {
+  border-color: var(--signal);
+  background: rgba(232,89,12,0.04);
+}
+.scheduler__service-btn span {
+  font-weight: 400;
+  font-size: 0.82rem;
+  color: var(--steel);
+}
+
+/* Step 2: Date/time */
+.scheduler__day-strip {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding-bottom: 4px;
+  margin-bottom: 16px;
+}
+.scheduler__day-strip::-webkit-scrollbar { display: none; }
+
+.scheduler__day {
+  flex: 0 0 auto;
+  width: 56px;
+  padding: 10px 4px;
+  border: 2px solid var(--haze);
+  border-radius: var(--radius-sm);
+  text-align: center;
+  font-size: 0.82rem;
+  font-weight: 600;
+  min-height: 44px;
+  transition: border-color 0.15s, background 0.15s;
+}
+.scheduler__day:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+.scheduler__day:not(:disabled):hover {
+  border-color: var(--signal);
+}
+.scheduler__day.is-selected {
+  border-color: var(--signal);
+  background: var(--signal);
+  color: #fff;
+}
+.scheduler__day-abbr {
+  display: block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  opacity: 0.7;
+  margin-bottom: 2px;
+}
+.scheduler__day-num {
+  display: block;
+  font-size: 1.05rem;
+}
+
+.scheduler__slots {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.scheduler__slot {
+  padding: 12px;
+  border: 2px solid var(--haze);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+  min-height: 44px;
+  transition: border-color 0.15s, background 0.15s;
+}
+.scheduler__slot:not(:disabled):hover {
+  border-color: var(--signal);
+}
+.scheduler__slot:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+.scheduler__slot.is-selected {
+  border-color: var(--signal);
+  background: var(--signal);
+  color: #fff;
+}
+.scheduler__tz {
+  font-size: 0.78rem;
+  color: var(--steel);
+  text-align: center;
+}
+
+/* Step 3: Confirm */
+.scheduler__confirm-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.scheduler__summary {
+  font-size: 0.88rem;
+  color: var(--steel);
+  padding: 12px 14px;
+  background: var(--haze);
+  border-radius: var(--radius-sm);
+  line-height: 1.5;
+}
+
+/* Scheduler confirmation */
+.scheduler__done {
+  text-align: center;
+  padding: 24px 16px;
+}
+.scheduler__done-title {
+  font-size: 1.3rem;
+  font-weight: var(--heading-weight);
+  margin-bottom: 0.5rem;
+}
+.scheduler__done-details {
+  font-size: 0.9rem;
+  color: var(--steel);
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+.scheduler__done-code {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+.scheduler__done-note {
+  font-size: 0.82rem;
+  color: var(--steel);
+  opacity: 0.7;
+  margin-bottom: 0.75rem;
+}
+.scheduler__done-demo {
+  font-size: 0.78rem;
+  color: var(--steel);
+  opacity: 0.6;
+  margin-bottom: 1rem;
+}
+.scheduler__done-reset {
+  color: var(--signal);
+  font-weight: 600;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 0.95rem;
+  text-decoration: underline;
+}

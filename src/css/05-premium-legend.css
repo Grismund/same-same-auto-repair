@@ -1,0 +1,13 @@
+/* ============================================================
+   Premium Legend
+   ============================================================ */
+.premium-legend {
+  background: var(--haze);
+  padding: 14px 0;
+  font-size: 0.9rem;
+  color: var(--steel);
+  text-align: center;
+}
+.premium-legend__star {
+  color: var(--signal);
+}
