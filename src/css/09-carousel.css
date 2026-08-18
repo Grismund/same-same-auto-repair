@@ -11,7 +11,7 @@
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
-  padding: 0 20px;
+  padding: 8px 20px;
 }
 .carousel__track::-webkit-scrollbar { display: none; }
 
