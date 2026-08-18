@@ -433,6 +433,11 @@ fieldset { border: none; }
   border-radius: var(--radius);
   overflow: hidden;
   position: relative;
+  transition: transform 0.3s ease;
+}
+.carousel__slide.is-active {
+  transform: scale(1.05);
+  z-index: 1;
 }
 .carousel__slide img {
   width: 100%;
@@ -513,6 +518,11 @@ fieldset { border: none; }
 .testimonial-carousel__slide {
   flex: 0 0 85%;
   scroll-snap-align: center;
+  transition: transform 0.3s ease;
+}
+.testimonial-carousel__slide.is-active {
+  transform: scale(1.05);
+  z-index: 1;
 }
 .testimonial-card {
   background: var(--paper);

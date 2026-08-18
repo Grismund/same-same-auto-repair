@@ -21,6 +21,11 @@
   border-radius: var(--radius);
   overflow: hidden;
   position: relative;
+  transition: transform 0.3s ease;
+}
+.carousel__slide.is-active {
+  transform: scale(1.05);
+  z-index: 1;
 }
 .carousel__slide img {
   width: 100%;

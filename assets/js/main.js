@@ -180,6 +180,7 @@ function initCarousel() {
       if (entry.isIntersecting) {
         const idx = Array.from(slides).indexOf(entry.target);
         dots.forEach((d, i) => d.classList.toggle("is-active", i === idx));
+        slides.forEach((s, i) => s.classList.toggle("is-active", i === idx));
       }
     });
   }, { root: track, threshold: 0.6 });
@@ -645,6 +646,7 @@ function initTestimonialCarousel() {
       if (entry.isIntersecting) {
         const idx = Array.from(slides).indexOf(entry.target);
         dots.forEach((d, i) => d.classList.toggle("is-active", i === idx));
+        slides.forEach((s, i) => s.classList.toggle("is-active", i === idx));
       }
     });
   }, { root: track, threshold: 0.6 });
